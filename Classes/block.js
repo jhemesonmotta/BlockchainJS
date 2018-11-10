@@ -1,7 +1,7 @@
 const sha256 = require('crypto-js/sha256')
 
 class Block {
-    constructor(index = 0, previousHash = null, data = 'Genesis block', difficulty = 1) {
+    constructor(index = 0, previousHash = null, data = 'Genesis block', difficulty = 4) {
         this.index = index
         this.previousHash = previousHash
         this.data = data
@@ -16,7 +16,10 @@ class Block {
         this.mine()
     }
 
-    // função que gerará hashes
+    /**
+         * This function generates the hashcode.
+         * @returns the hashcode
+     */
     generateHash() {
         return sha256(
             this.index
@@ -27,13 +30,14 @@ class Block {
         ).toString()
     }
 
-    // A função mine vai criar hashes até que a quantidade de zeros à esquerda do hash seja atentida.
+    /**
+         * A função mine vai criar hashes até que a quantidade de zeros à esquerda do hash seja atentida.
+         * @returns nothing
+     */
     mine() {
         this.hash = this.generateHash()
     
-        while (!(/^0*$/.test(
-                this.hash.substring(0, this.difficulty)
-            ))) {
+        while (!(/^0*$/.test(this.hash.substring(0, this.difficulty)))) {
                 this.nonce++
                 this.hash = this.generateHash()
         }

@@ -8,12 +8,19 @@ class Blockchain {
         this.difficulty = difficulty
     }
 
-    // função para pegar o último block da cadeia 
+    /**
+         * função para pegar o último block da cadeia 
+         * @returns nothing
+     */
     getLastBlock() {
         return this.blocks[this.blocks.length - 1]
     }
 
-    // função para adicionar um novo bloco à cadeia
+    /**
+         * função para pegar o último block da cadeia 
+         * @param {data} input the data do record in the block
+         * @returns nothing
+     */
     addBlock(data) {
         const index = this.index
         const previousHash = this.getLastBlock().hash
