@@ -1,0 +1,14 @@
+{
+  "name": "blockchain-js",
+  "version": "0.1.0",
+  "description": "Blockchain implementado com JS",
+  "main": "Test/testing-the-blockchain.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jhemeson, Ian, Alexandre, Kennedy",
+  "license": "ISC",
+  "dependencies": {
+    "crypto-js": "^3.1.9-1"
+  }
+}

@@ -12,7 +12,7 @@ console.log(
         blockchainInstance.blocks
     )
 ) // true
-blockchain.blocks[1].data.amount = 30000 // ataque malicioso
+blockchainInstance.blocks[1].data.amount = 30000 // ataque malicioso
 console.log(
     blockchainIntegrityInstance.isValid(
         blockchainInstance.blocks

@@ -1,10 +1,11 @@
 const Block = require('./block')
 
 class Blockchain {
-    constructor() {
+    constructor(difficulty = 1) {
         // inicializado o array já com o "Genesis Block" --> o primeiro bloco criado na cadeia
         this.blocks = [new Block()]
         this.index = 1
+        this.difficulty = difficulty
     }
 
     // função para pegar o último block da cadeia 
