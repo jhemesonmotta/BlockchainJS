@@ -10,7 +10,11 @@ class Block {
     }
 
     generateHash() {
-        return sha256(this.index + this.previousHash + JSON.stringify(this.data) + this.timestamp).toString()
+        return sha256(this.index
+            + this.previousHash
+            + JSON.stringify(this.data)
+            + this.timestamp)
+        .toString()
     }
 }
 
