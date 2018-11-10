@@ -1,2 +1,2 @@
 # BlockchainJS
-Implementação para Sistemas Distribuidos. Se for pra frente eu descrevo mais...
+Projeto JS (futuramente uma biblioteca) que implementa um Blockchain - uma tecnologia de registro distribuído que visa a descentralização como medida de segurança - de maneira simples.
